@@ -12,7 +12,13 @@ this.setData中
 -->
 <input type="text" bindinput="handleInput"/>
 
-<button bindtap="handletap" data-operation="{{1}}">+</button>
-<button bindtap="handletap" data-operation="{{-1}}">-</button>
+<button bindtap="handletap" >+</button>
+<button bindtap="handletap1" >-</button>
 
 <view>{{num}}</view>
+
+
+<button bindtap="handletap2" size="mini">+</button>
+<button bindtap="handletap3" size="mini">-</button>
+<view>{{count}}</view>
+
