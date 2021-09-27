@@ -1,0 +1,47 @@
+<!--pages/demo/demo.wxml-->
+<text>你好</text>
+<view>aaaa</view>
+<view id="my-{{ids[0]}}">动态id</view>
+<view id="my-{{ids[1]}}">动态id</view>
+<view id="my-{{ids[2]}}">动态id</view>
+
+<!--
+  列表循环
+  wx:for="{{数组或对象}}"  wx:for-item="循环项的名称" wx:for-index="循环项的索引"
+  wx:key 唯一的值 用来提高列表渲染的性能
+  wx:key 绑定一个普通的字符串的时候 那么这个字符串名称 肯定是 循环数组 中的 对象的 唯一属性
+  wx:key="*this" 就表示 你的数组是个普通的数组 *this 表示是 循环项
+  [1,2,3,4]   ["1","sss","fvf"]
+-->
+<view wx:for="{{list}}" wx:key="index">{{item}}=={{index}}</view>
+<view>循环方法2==================</view>
+
+<view wx:for="{{list}}" wx:for-item="item1"
+wx:for-index="index1" wx:key="index">这里：{{item1}}==索引：{{index1}}</view>
+
+<view wx:if="{{iscreate}}">动态创建删除</view>
+<view wx:else>删除</view>
+<view hidden="{{idHidden}}">隐藏</view>
+<button type="primary" bindtap="handleTap">click</button>
+<view>{{person.name}}</view>
+<view>{{person.age}}</view>
+
+<!--
+  block：
+  占位符的标签
+  写代码的时候可以看到标签的存在
+  页面渲染 小程序会把它移除掉
+-->
+
+<view><view>
+  <view wx:for="{{list}}" wx:key="index"  class="ddd">{{item}}=={{index}}</view>
+
+</view>
+
+</view>
+<view>
+  <block wx:for="{{list}}" wx:key="index">{{item}}=={{index}}</block>
+
+
+
+</view>

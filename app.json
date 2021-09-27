@@ -1,0 +1,35 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/demo/demo"
+   
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#14c145",
+    "navigationBarTitleText": "首页",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "selectedColor": "#14c145",
+    "list":[
+      {
+      "pagePath": "pages/demo/demo",
+      "text":"测试",
+      "iconPath": "images/tabbar/home.png",
+      "selectedIconPath": "images/tabbar/home_active.png"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "text":"我的",
+        "iconPath": "images/tabbar/profile.png",
+        "selectedIconPath": "images/tabbar/profile_active.png"
+       
+      }
+
+  ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
