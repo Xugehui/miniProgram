@@ -16,3 +16,5 @@ this.setData中
 <button bindtap="handletap" data-operation="{{-1}}">-</button>
 
 <view>{{num}}</view>
+
+<view wx:for="{{list}}" wx:key="index">{{item}}</view>
