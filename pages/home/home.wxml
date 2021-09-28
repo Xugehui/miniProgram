@@ -16,3 +16,30 @@ this.setData中
 <button bindtap="handletap" data-operation="{{-1}}">-</button>
 
 <view>{{num}}</view>
+
+<!--
+  通过按钮获取用户信息,目前只能获取匿名信息
+-->
+<button bindgetuserinfo="handleGetuserinfo" 
+        open-type="getUserInfo">
+  获取信息
+</button>
+
+<!--
+  展示用户信息
+-->
+<!-- <open-data type="userNickName">用户名</open-data>
+<open-data type="userAvatarUrl">用户头像</open-data> -->
+
+<view class="container">
+  <view class="userinfo">
+    <block wx:if="{{!hasUserInfo}}">
+      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
+      <button wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    </block>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+</view>
