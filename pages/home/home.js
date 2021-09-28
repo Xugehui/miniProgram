@@ -23,7 +23,7 @@ Page({
     console.log('onload:生命周期回调—监听页面加载')
     wx.request({
       url: 'http://123.207.32.32:8000/recommend',
-      success:function(res){
+      success:(res)=>{
         console.log(res)
         const data = res.data
         console.log(data)
