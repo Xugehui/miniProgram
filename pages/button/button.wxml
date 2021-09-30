@@ -1,0 +1,19 @@
+<!--pages/button/button.wxml-->
+<text>pages/button/button.wxml</text>
+<!--button的基本使用-->
+<button>按钮</button>
+<!--size 属性：mini-->
+<button size='mini'>anniu</button>
+<!--type属性-->
+<button size='mini' type='primary'>anniu</button>
+<button size='mini' type='default'>anniu</button>
+<button size='mini' type='warn'>anniu</button>
+
+<!-- plani:镂空效果-->
+<button plain>镂空</button>
+<!-- disable 不可用-->
+<button disabled>不可用</button>
+<!-- loading-->
+<button loading>loading</button>
+<!-- hover-class-->
+<button hover-class="pressed">点击按钮颜色 在xss中设置</button>

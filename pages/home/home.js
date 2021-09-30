@@ -20,19 +20,33 @@ Page({
   },
   //-------------------------------1\监听页面的生命周期函数---------------
   onLoad(){
+    //方法2：需添加的
+    const _this = this
     console.log('onload:生命周期回调—监听页面加载')
     wx.request({
       url: 'http://123.207.32.32:8000/recommend',
-      success:(res)=>{
+      //方法一
+      // success:(res)=>{
+      //   console.log(res)
+      //   const data = res.data
+      //   console.log(data)
+      //   this.setData({
+      //     list: data
+      //   }) 
+
+      // }
+       //方法2：
+      success: function(res) {
         console.log(res)
         const data = res.data
         console.log(data)
-        this.setData({
+        _this.setData({
           list: data
         }) 
-
-      }
+  
+    },
     })
+   
   },
   //页面初次渲染完成时会回调
   onReady(){
@@ -48,7 +62,5 @@ Page({
   onUnload(){
     console.log('onUnLoad:生命周期回调—监听页面卸载')
   }
-
-
   
 })
