@@ -1,0 +1,13 @@
+<!--pages/input/input.wxml-->
+<!--value:input中的默认值-->
+<input value="这里是默认"/>
+<!--type:决定键盘类型-->
+<input type="number"/>
+<!--password 不显示输入的-->
+<input  password/>
+<!--placeholder:占位-->
+<input placeholder='占位' />
+<!--input绑定事件 bindinput bindfocus bindblur-->
+<input bindinput="handleInput"/>
+<input bindfocus="handleFocus"/>
+<input bindblur="handleBlur"/>

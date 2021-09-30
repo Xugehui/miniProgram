@@ -1,0 +1,19 @@
+<!--pages/image/image.wxml-->
+<text>image组件可以写成单标签，也可以写成双标签</text>
+<!-- image组件默认有自己的大小:320*240
+     image组件是一个行内块级元素
+-->
+<image/>
+<text>hhhh</text>
+<!--scr:本地地址、远程地址-->
+<image src='../../images/tabbar/cart_active.png'></image>
+<image src='/images/tabbar/home_active.png'></image>
+<!--补充：相册中的图片-->
+<button bindtap='handleChooseAlnum'>选择图片</button>
+<image src='{{imagePath}}'></image>
+<!-- bindload 监听图片加载完成-->
+<image wx:for="{{5}}" wx:key='index' src='/images/tabbar/profile_active.png' bindload="handleImageLoad" ></image>
+<!--lazy-load懒加载:在即将进入一定范围（上下三屏时）才开始加载-->
+<image wx:for="{{5}}" wx:key='index' src='/images/tabbar/cart_active.png' bindload="handleImageLoad" lazy-load="{{true}}"></image>
+<!--show-menu-by-longpress:长按图片显示发送给朋友、收藏、保存图片、搜一搜、打开名片/前往群聊/打开小程序（若图片中包含对应二维码或小程序码）的菜单-->
+<image src='/images/tabbar/category_active.png' show-menu-by-longpress/>

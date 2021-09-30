@@ -1,0 +1,7 @@
+<!--pages/view/view.wxml-->
+<text>view的基本使用</text>
+
+<view>view 块级元素，通常用作容器组件</view>
+<view class='box'>nihao</view>
+<!-- hover-class指定按下去的样式类-->
+<view class='box1' hover-class="hover_view">点击变样式</view>
