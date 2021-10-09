@@ -8,3 +8,7 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+.box1{
+  background: lightcoral;
+  font-size: 32px;
+}

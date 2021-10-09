@@ -1,0 +1,23 @@
+<!--pages/scroll/scroll.wxml-->
+<!-- 1\水平滚动 scroll-x-->
+<scroll-view class='container1' scroll-x>
+<view wx:for="{{10}}" wx:key="index" class='item1' >{{item}}</view>
+
+</scroll-view>
+<!-- 2\垂直滚动 scroll-x-->
+<scroll-view class='container2' scroll-y>
+<view wx:for="{{10}}" wx:key="index" class='item2' >{{item}}</view>
+</scroll-view>
+
+<scroll-view class='container2' scroll-y bindscroll="handleScroll">
+<view wx:for="{{10}}" wx:key="index" class='item2' >{{item}}</view>
+
+</scroll-view>
+
+<!--设置样式的三种方式-->
+<!--1、行内样式-->
+<view style="color: blueviolet; font-size: 32px;">哈哈哈</view>
+<!--2、页内样式-->
+<view class='box'>呵呵呵</view>
+<!--3、全局样式-->
+<view class='box1'>嘿嘿嘿</view>

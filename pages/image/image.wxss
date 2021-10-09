@@ -1,1 +1,14 @@
 /* pages/image/image.wxss */
+.container1{
+  background: aqua;
+  white-space: nowrap;
+
+}
+.item1{
+  width: 100px;
+  height: 100px;
+  background:red ;
+  margin: 10px;
+  display: inline-block;
+
+}
