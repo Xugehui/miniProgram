@@ -1,0 +1,38 @@
+<!--pages/template/template.wxml-->
+<view>template:模板使用</view>
+
+<template name="model1">
+ <button size="mini">这里是按钮</button>
+ <view class="container">天天开心</view>
+</template>
+
+<view>模板在使用前不生效</view>
+
+<!--模板的使用-->
+<template is='model1'></template>
+<!--动态改变模板里面的内容-->
+<template name='model2'>
+ <button size="mini" type="primary">{{btn}}</button>
+ <view>{{content}}</view>
+</template>
+
+<template is='model2' data="{{btn:'按钮' ,content:'哈哈哈'}}"></template>
+<template is='model2' data="{{btn:'点击' ,content:'嘿嘿嘿'}}"></template>
+<template is='model2' data="{{btn:'警告' ,content:'呵呵呵'}}"></template>
+
+<!--将template导入到其他页面
+  在其他页面加入
+  <import scr=''/>
+
+-->
+
+<!--
+关于wxml的导入有两种方式：
+  import导入：
+    1、主要是导入template
+    2、特点：不能进行递归导入
+  include引入：
+    1、将公共的wxml中的组件抽取到一个文件中
+    2、特点：不能导入template/wxs，可以进行递归导入
+
+-->

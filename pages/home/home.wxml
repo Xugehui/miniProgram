@@ -10,6 +10,7 @@ this.setData中
     }
 
 -->
+<include src='/pages/wxml/wxml.wxml'/>
 <input type="text" bindinput="handleInput"/>
 
 <button bindtap="handletap" >+</button>
@@ -47,3 +48,10 @@ this.setData中
  <view>{{item}}</view>
 </block>
 
+
+<import src='/pages/template/template.wxml'></import>
+<template is='model2' data="{{btn:'按钮' ,content:'哈哈哈'}}"></template>
+<template is='model2' data="{{btn:'点击' ,content:'嘿嘿嘿'}}"></template>
+<template is='model2' data="{{btn:'警告' ,content:'呵呵呵'}}"></template>
+
+<include src='/pages/wxml/abc.wxml'/>

@@ -1,0 +1,24 @@
+<!--pages/wxs/wxs.wxml-->
+<!--wxs的定义方式-->
+<!-- <wxs module="info">
+  var message = 'hello world';
+  var name = 'coderwhy';
+  function sum(num1,num2){
+    return num1+num2
+  }
+  //commonjs的模块化导出的方法
+  module.exports={
+    message:message,
+    name:name,
+    sum:sum
+  }
+</wxs> -->
+<!--放到单独的文件里，再用wxs进行导入-->
+<!--这里只能使用相对路径上-->
+<wxs src='./wxs.wxs' module="info"/>
+<view>{{info.message}}</view>
+<view>{{info.name}}</view>
+<view>{{info.sum(23,59)}}</view>
+<!--wxs的应用-->
+<wxs src='./test.wxs' module="test"></wxs>
+<view>{{test.priceFormat(price,3)}}</view>
