@@ -1,1 +1,8 @@
 /* pages/home/home.wxss */
+.box{
+  color: blueviolet;
+}
+.active{
+  color: brown;
+  font-size: 120rpx;
+}

@@ -21,4 +21,29 @@ this.setData中
 <button bindtap="handletap2" size="mini">+</button>
 <button bindtap="handletap3" size="mini">-</button>
 <view>{{count}}</view>
+<!--{{}}用法-->
+<view>{{first}}</view>
+<view>{{second}}</view>
+<view>{{first}} {{second}}</view>
+<view>{{first+ ' '+second }}</view>
+<view>{{age >= 18 ? '成年人' : '未成年人'}}</view>
+<view>{{nowtime}}</view>
+<button size="mini" bindtap="handleSwichcolor">切换颜色</button>
+<view class="box {{isActive ? 'active' : ''}}">变变变</view>
+<view>-------------条件判断-------------</view>
+<view>-------------wx:if的使用-------------</view>
+<button size="mini" type="primary" bindtap="handleSwichShow">点击隐身</button>
+<view wx:if="{{isShow}}">隐身</view>
+
+<!--在多层遍历时：经常给item起名-->
+<block wx:for="{{nums}}" wx:for-item='inneritem'>
+  <block wx:for="{{inneritem}}">
+   <view>{{item}}</view>
+  </block>
+</block>
+
+<text>-------------------------</text>
+<block wx:for="{{nums}}">
+ <view>{{item}}</view>
+</block>
 

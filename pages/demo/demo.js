@@ -19,7 +19,7 @@ Page({
     //console.log("click")
     this.setData(
       {
-        iscreate:false,
+        iscreate:!this.data.iscreate,
         idHidden:!this.data.idHidden
       }
     )

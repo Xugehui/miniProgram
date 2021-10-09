@@ -18,7 +18,14 @@
 
 <view wx:for="{{list}}" wx:for-item="item1"
 wx:for-index="index1" wx:key="index">这里：{{item1}}==索引：{{index1}}</view>
+<!--
+wx:if和hidden在隐藏组件时有什么区别：
+hidden：将一个组件隐藏起来时，该组件依然存在（只是display:none）
+wx:id: 将一个组件隐藏起来时，该组件根本不存在（压根没有创建）
+选择：
+如果显示和隐藏切换的频繁选择hidden 否则 选择 wx:if
 
+-->
 <view wx:if="{{iscreate}}">动态创建删除</view>
 <view wx:else>删除</view>
 <view hidden="{{idHidden}}">隐藏</view>
@@ -32,6 +39,13 @@ wx:for-index="index1" wx:key="index">这里：{{item1}}==索引：{{index1}}</vi
   写代码的时候可以看到标签的存在
   页面渲染 小程序会把它移除掉
 -->
+<!--
+<block/>并不是一个组件，他仅仅是一个包装元素，不会在页面中做任何渲染，只接受控制属性，性能高。
+使用block有两个好处：
+ 1、将需要进行遍历或者判断的内容进行包裹
+ 2、将遍历和判断的属性放在block便签中中，不影响普通属性的阅读，提高代码的可读性
+
+-->
 
 <view><view>
   <view wx:for="{{list}}" wx:key="index"  class="ddd">{{item}}=={{index}}</view>
@@ -41,7 +55,4 @@ wx:for-index="index1" wx:key="index">这里：{{item1}}==索引：{{index1}}</vi
 </view>
 <view>
   <block wx:for="{{list}}" wx:key="index">{{item}}=={{index}}</block>
-
-
-
 </view>
