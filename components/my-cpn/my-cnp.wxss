@@ -1,0 +1,9 @@
+/* components/my-cpn/my-cnp.wxss */
+.com{
+  margin-top: 30rpx;
+  background-color: blueviolet;
+  font-size: larger;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

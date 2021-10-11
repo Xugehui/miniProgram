@@ -1,0 +1,4 @@
+<!--components/my-cpn/my-cnp.wxml-->
+<view class="com">我是标题</view>
+<view>我是导航</view>
+<button>点击</button>

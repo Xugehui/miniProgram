@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+   "my-cnp":"/components/my-cpn/my-cnp",
+   "my-one":"/components/my-one/my-one",
+   "my-event":"/components/my-event/my-event"
+  }
+}

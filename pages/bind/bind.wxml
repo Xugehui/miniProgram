@@ -1,0 +1,33 @@
+
+<!--事件的传递参数-->
+<view class='container1'>
+  <block wx:for="{{title}}" wx:key="index">
+    <view class="item" 
+    bindtap="handleItemClick"
+    data-index="{{index}}"
+    data-item="{{item}}"
+    >{{item}}</view>
+  </block>
+
+</view>
+
+<!--事件冒泡和事件捕获-->
+<!-- bind:一层层传递
+     catch : 阻止事件的进一步传递
+ -->
+<view class='view1' capture-bind:tap='handleCaptureView1' bindtap="handleBindView1">
+  <view class='view2' capture-bind:tap='handleCaptureView2' bindtap="handleBindView2">
+    <view class='view3' capture-bind:tap='handleCaptureView3' bindtap="handleBindView3"></view>
+  </view>
+</view>
+
+<my-cnp></my-cnp>
+<!--给自定义组件传递数据/样式-->
+<my-one title='哈哈哈' titleclass='red'></my-one>
+<my-one title='heheh' titleclass='green'></my-one>
+<my-one title='heihei'></my-one>
+<my-one ></my-one>
+
+
+<view>当前计数为{{count}}</view>
+<my-event bindtap="handeleIn"></my-event>

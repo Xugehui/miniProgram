@@ -1,0 +1,3 @@
+<!--components/my-one/my-one.wxml-->
+<view class='title titleclass'>{{title}}</view>
+<view class='content'>python</view>

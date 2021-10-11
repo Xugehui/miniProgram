@@ -1,0 +1,32 @@
+/* pages/bind/bind.wxss */
+.container1{
+  display: flex;
+}
+.item{
+  flex:1;
+  text-align: center;
+}
+.view1{
+  height: 400rpx;
+  width: 400rpx;
+  background: chocolate;
+}
+.view2{
+  height: 300rpx;
+  width: 300rpx;
+  background: yellowgreen;
+}
+.view3{
+  height: 200rpx;
+  width: 200rpx;
+  background: burlywood;
+}
+.red{
+  background-color: darkgreen;
+  color: aqua;
+
+}
+.green{
+  color: red;
+
+}
